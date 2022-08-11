@@ -6,9 +6,20 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
 }
+header,
+.submit-section {
+  padding: 0px 2vw;
+}
+.submit-section {
+  margin-top: 2rem;
+}
 
 h1 {
-  color: SeaGreen;
+  color: rgb(164, 116, 73);
+}
+
+.left h1 {
+  color: white;
 }
 
 p,
@@ -41,6 +52,21 @@ a {
   color: white;
 }
 
+.left div {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.527);
+  line-height: 2rem;
+  padding: 0px 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  width: 5rem;
+  padding: 10px;
+}
+
 .form-section {
   display: flex;
   width: 60vw;
@@ -69,10 +95,100 @@ a {
   background-color: rgb(240, 240, 240);
 }
 
+.input-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.2rem 2vw 3rem 2vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
 form {
   display: flex;
   width: 60vw;
   flex-flow: row wrap;
   gap: 1rem;
   font-size: 1rem;
+}
+
+label {
+  position: relative;
+  width: 15rem;
+  margin-bottom: 15px;
+}
+input {
+  font-family: customFontBold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+input:focus {
+  border: none;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+  outline: none;
+}
+
+input:invalid:focus {
+  border: 2px solid rgb(255, 69, 100);
+}
+
+input:focus:valid {
+  border: rgb(0, 183, 255) 2px solid;
+}
+
+.error {
+  font-family: customFontBold;
+  font-size: 0.7rem;
+  color: rgb(255, 69, 100);
+  position: absolute;
+}
+
+@media screen and (max-width: 850px) {
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    width: 100vw;
+    height: 20rem;
+  }
+
+  .header div,
+  .input-section,
+  .submit-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-section,
+  form,
+  .submit-section {
+    width: 100vw;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 505px) {
+  label {
+    margin-bottom: 25px;
+  }
+}
+
+button[type="submit"] {
+  padding: 0.8rem 1.3rem;
+  font-size: 1.3rem;
+  background-color: rgb(164, 116, 73);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: -1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(129, 84, 56);
 }
